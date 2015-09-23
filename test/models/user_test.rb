@@ -1,7 +1,7 @@
 require 'test_helper'
 
 class UserTest < ActiveSupport::TestCase
-  # test "the truth" do
-  #   assert true
-  # end
+  test "with_role('tenderlover') returns only Aaron" do
+    assert_equal User.with_role('tenderlover'), [users(:aaron)]
+  end
 end
